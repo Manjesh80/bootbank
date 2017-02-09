@@ -37,6 +37,11 @@ public class BookController {
         return bookRepository.findBookByIsbn(isbn.getIsbn());
     }
 
+   /* @RequestMapping(value = "/session", method = RequestMethod.GET)
+    public String getSessionId(HttpServletRequest request) {
+        return request.getSession().getId();
+    }*/
+
     @RequestMapping(value = "/{isbn}/reviewers", method = RequestMethod.GET)
     public List<Reviewer> getReviewers(@PathVariable("isbn") Book book) {
         return book.getReviewers();
