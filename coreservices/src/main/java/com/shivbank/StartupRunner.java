@@ -52,7 +52,7 @@ public class StartupRunner implements CommandLineRunner {
         bookRepository.save(book);*/
     }
 
-    @Scheduled(initialDelay = 1000, fixedRate = 10000)
+    @Scheduled(initialDelay = 1000, fixedRate = 300000)
     public void run() {
         LOG.info("Number of books: " + bookRepository.count());
 

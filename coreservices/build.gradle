@@ -36,5 +36,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-rest')
     //compile("org.springframework.boot:spring-boot-starter-jetty")
     runtime('com.h2database:h2')
+    compile project(':db-count-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
