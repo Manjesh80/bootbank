@@ -5,6 +5,7 @@ import com.shivbank.coreservicestarter.dbcount.EnableDbCounting;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -13,7 +14,8 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableScheduling
-//@EnableDbCounting
+@EnableDbCounting
+@ComponentScan(excludeFilters = @ComponentScan.Filter(UsedForTesting.class))
 public class CoreservicesApplication {
 
     public static void main(String[] args) {
@@ -39,4 +41,7 @@ public class CoreservicesApplication {
             }
         };
     }*/
+}
+
+@interface UsedForTesting {
 }

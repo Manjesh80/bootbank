@@ -41,13 +41,13 @@ public class StartupRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         LOG.info("Total number of books ==> " + bookRepository.count());
 
-        Author author = new Author("Alex", "Antonov");
+       /* Author author = new Author("Alex", "Antonov");
         author = authorRepository.save(author);
         Reviewer reviewer = new Reviewer("Ganesh", "Kumar");
         Publisher publisher = new Publisher("Packt");
         publisher = publisherRepository.save(publisher);
         Book book = new Book("978-1-78528-415-1", "Spring Boot Recipes", author, publisher);
-        book = bookRepository.save(book);
+        book = bookRepository.save(book);*/
         /*book.setReviewers(Arrays.asList(reviewer));
         bookRepository.save(book);*/
     }

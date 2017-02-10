@@ -34,8 +34,12 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-jdbc')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-data-rest')
+    testCompile("info.cukes:cucumber-spring:1.2.2")
+    testCompile("info.cukes:cucumber-java8:1.2.2")
+    testCompile("info.cukes:cucumber-junit:1.2.2")
     //compile("org.springframework.boot:spring-boot-starter-jetty")
     runtime('com.h2database:h2')
     compile project(':db-count-starter')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    testRuntime("com.jayway.jsonpath:json-path")
 }
